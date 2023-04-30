@@ -1,5 +1,8 @@
 hostname {{ device.name }}
 !
+{# interfaces as laid out in the netbox device -#}
+{% include 'config-templates/asa/common/interface.j2' -%}
+!
 {# ssh settings and allowed networks -#}
 {% include 'config-templates/asa/common/ssh.j2' -%}
 !

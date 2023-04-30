@@ -1,6 +1,0 @@
----
-ntp:
-  servers:
-  - 10.10.1.2
-  - 10.10.1.5
-  timezone: UTC

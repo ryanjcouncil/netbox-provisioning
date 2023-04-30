@@ -1,1 +1,10 @@
 {% extends 'config-templates/asa/asa.j2' %}
+
+{% block content %}
+{# ssh settings and allowed networks #}
+{% include 'config-templates/asa/common/ssh.j2' -%}
+!
+{# static routes pulling data from local device contexts #}
+{% include 'config-templates/asa/common/route.j2' -%}
+!
+{% endblock %}

@@ -1,0 +1,5 @@
+ssh timeout {{ ssh.timeout }}
+ssh version {{ ssh.version }}
+{% for host in ssh.allowed_hosts -%}
+ssh {{ host.network }} {{ host.netmask }} {{ host.zone }}
+{% endfor -%}

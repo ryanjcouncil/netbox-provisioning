@@ -4,6 +4,7 @@ hostname {{ device.name }}
 {% for interface in device.interfaces.all() -%}
   {% include 'config-templates/asa/common/interface.j2' %}
 {% endfor -%}
+!
 {# ssh settings and allowed networks -#}
 {% include 'config-templates/asa/common/ssh.j2' -%}
 !

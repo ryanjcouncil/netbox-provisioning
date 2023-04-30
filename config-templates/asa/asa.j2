@@ -1,6 +1,6 @@
 hostname {{ device.name }}
 !
 {% for interface in device.interfaces.all() -%}
-{% include 'config-templates/asa/5500.j2' %}
+{% include 'config-templates/asa/5500.j2' -%}
 !
 {% endfor -%}

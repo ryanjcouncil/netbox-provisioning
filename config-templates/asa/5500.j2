@@ -1,14 +1,15 @@
-{% for interface in device.interfaces.all() %}
+{% for interface in device.interfaces.all() -%}
 interface {{ interface.name }}
-  {% if interface.speed %}
+  {% if interface.speed -%}
     speed {{ interface.speed }}
   {% endif %}
-  {% if interface.duplex %}
+  {% if interface.duplex -%}
     duplex {{ interface.duplex }}
   {% endif %}
-  {% if interface.enabled %}
+  {% if interface.enabled -%}
   no shut
   {% else %}
   shut
   {% endif %}
 {% endfor %}
+!

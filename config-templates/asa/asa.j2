@@ -1,3 +1,8 @@
 hostname {{ device.name }}
 !
-{{ include 'config-templates/asa/5500X.j2' }}
+{# ssh settings and allowed networks #}
+{% include 'config-templates/asa/common/ssh.j2' -%}
+!
+{# static routes pulling data from local device contexts #}
+{% include 'config-templates/asa/common/route.j2' -%}
+!

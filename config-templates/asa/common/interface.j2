@@ -1,15 +1,15 @@
 interface {{ interface.name }}
   {# check optional interface settings -#}
-  {% if interface.speed %}
+  {% if interface.speed -%}
   speed {{ interface.speed }}
   {% endif -%}
-  {% if interface.duplex %}
+  {% if interface.duplex -%}
   duplex {{ interface.duplex }}
   {% endif -%}
   {# determine if the port should be shut or no shut -#}
-  {% if interface.enabled %}
+  {% if interface.enabled -%}
   no shut
-{% else %}
+{% else -%}
   shut
 {% endif -%}
 !

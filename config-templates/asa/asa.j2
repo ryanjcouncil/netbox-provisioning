@@ -1,5 +1,3 @@
 hostname {{ device.name }}
 !
-{% if device.platform.name == 'ASA5500X' -%}
-  {{ include 'config-templates/asa/5500X.j2' }}
-{% endif -%}
+{{ include 'config-templates/asa/5500X.j2' }}

@@ -1,0 +1,6 @@
+{% extends 'config-templates/asa/asa.j2' %}
+
+{% block routes %}
+{% for route in routes -%}
+route {{ route.zone }} {{ route.network }} {{ route.mask }} {{ route.next_hop }}
+{% endblock %}

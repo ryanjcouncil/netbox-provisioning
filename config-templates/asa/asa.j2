@@ -5,3 +5,5 @@ hostname {{ device.name }}
 {% include 'config-templates/asa/5500.j2' -%}
 {% endif %}
 {% endfor %}
+!
+{% block routes %}{% endblock %}

@@ -2,14 +2,14 @@
 interface {{ interface.name }}
   {% if interface.speed -%}
     speed {{ interface.speed }}
-  {% endif %}
+  {% endif -%}
   {% if interface.duplex -%}
     duplex {{ interface.duplex }}
-  {% endif %}
+  {% endif -%}
   {% if interface.enabled -%}
   no shut
   {% else %}
   shut
-  {% endif %}
-{% endfor %}
+  {% endif -%}
+{% endfor -%}
 !

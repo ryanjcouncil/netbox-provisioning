@@ -1,13 +1,1 @@
-interface {{ interface.name }}
-  {% if interface.speed -%}
-  speed {{ interface.speed }}
-  {% endif -%}
-  {% if interface.duplex -%}
-  duplex {{ interface.duplex }}
-  {% endif -%}
-  {% if interface.enabled -%}
-  no shut
-{% else -%}
-  shut
-{% endif -%}
-!
+{% extends 'config-templates/asa/asa.j2' %}

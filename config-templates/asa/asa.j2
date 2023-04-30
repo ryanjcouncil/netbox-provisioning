@@ -1,9 +1,7 @@
 hostname {{ device.name }}
 !
-{% for interface in device.interfaces.all() -%}
-{% if interface.enabled -%}
-{% include 'config-templates/asa/5500.j2' -%}
-{% endif %}
-{% endfor %}
+{# #}
 !
+{# add static routes pulling data from local device contexts #}
 {% block routes %}{% endblock %}
+!

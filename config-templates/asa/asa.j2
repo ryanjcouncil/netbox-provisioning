@@ -3,5 +3,5 @@ hostname {{ device.name }}
 {# #}
 !
 {# add static routes pulling data from local device contexts #}
-{% include 'config-templates/asa/common/route.j2' %}
+{% include 'config-templates/asa/common/route.j2' -%}
 !

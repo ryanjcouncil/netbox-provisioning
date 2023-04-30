@@ -6,6 +6,10 @@ interface {{ interface.name }}
   {% if interface.duplex -%}
   duplex {{ interface.duplex }}
   {% endif -%}
+  {# cisco firewall security zones -#}
+  {% if interface.custom_fields.security_zone -%}
+  security-zone {{ interface.custom_fields.security_zone }}
+  {% endif -%}
   {# determine if the port should be shut or no shut -#}
   {% if interface.enabled -%}
   no shut

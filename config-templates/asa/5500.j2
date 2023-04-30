@@ -1,5 +1,3 @@
-{% for interface in device.interfaces.all() %}
-  {% for key, value in interface.items() %}
-    {{ key }} : {{ value }}
-  {% endfor %}
+{% for key, value in device.interfaces.all().items() %}
+{{ key }} :: {{ value }}
 {% endfor %}
